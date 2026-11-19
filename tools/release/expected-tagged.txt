@@ -1,0 +1,25 @@
+## [0.2.0] - YYYY-MM-DD
+
+### Action required
+
+- `strict_mode` is no longer read. A configuration that sets it sets `strict` to the same value instead. (d5e40fb)
+
+### Features
+
+- The `trim` option drops trailing whitespace from the output. (cache, bb707f9)
+
+### Bug fixes
+
+- An error raised in a nested call names the position of the call, so a caller finds it. (4bbd24a)
+- Input that is not UTF-8 returns an error instead of a panic. (e248d3a)
+- An error names the line of the input, as the Java library does. (afc390f)
+
+### Performance
+
+- An input used twice is parsed once, so using it again is faster. (ebfa2f0)
+
+### Other changes
+
+- The README lists every option with its default. (bd02092)
+
+[0.2.0]: https://github.com/oxidestack/infinispan-rs/compare/v0.1.0...v0.2.0

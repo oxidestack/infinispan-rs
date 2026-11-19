@@ -1,0 +1,20 @@
+infinispan-rs
+Copyright The infinispan-rs Authors. Licensed under the Apache License, Version 2.0 (LICENSE).
+
+This crate is a Rust port of the following work, and its behaviour is recorded from it.
+
+Infinispan (https://infinispan.org/), 14.0.35.Final, Copyright Red Hat, Inc. and individual contributors,
+Apache License 2.0. This product includes software developed by the Infinispan project.
+  The original sources are pinned, unmodified, as the git submodule upstream/ (with its own LICENSE and NOTICE).
+  tests/vectors/ holds bytes recorded from running unmodified Infinispan and JGroups jars; upstream-tools/ holds the
+  programs that record them.
+
+Infinispan ProtoStream (https://github.com/infinispan/protostream), Copyright Red Hat, Inc. and individual
+contributors, Apache License 2.0.
+  Pinned, unmodified, as the git submodule upstream-protostream/.
+
+MockServer (https://www.mock-server.com/), Copyright the MockServer authors, Apache License 2.0.
+  The test vectors for the Java serialization of MockServer's own state classes are recorded from those classes
+  compiled unmodified (VersionedWrapper, Blob); ExpectationEntry in upstream-tools/ is a structural stand-in.
+
+Test inputs taken from these works remain under their licences.

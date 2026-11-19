@@ -1,0 +1,34 @@
+[package]
+name = "infinispan-rs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "Apache-2.0"
+description = "Unofficial Rust port of the parts of Infinispan 14.0.35.Final that a REPL_SYNC clustered cache reaches: marshalling, consistent hashing, topology, state transfer, listeners"
+repository = "https://github.com/oxidestack/infinispan-rs"
+homepage = "https://oxidestack.github.io/infinispan-rs/"
+documentation = "https://docs.rs/infinispan-rs"
+readme = "README.md"
+keywords = ["infinispan", "cache", "cluster", "jgroups", "marshalling"]
+categories = ["caching", "network-programming"]
+# What crates.io gets: the library, its licence and notice, the README and the changelog. The pinned
+# upstream sources, the tests and their recorded vectors, the tools, the docs and the site stay in the
+# repository.
+include = ["/src/**", "/LICENSE", "/NOTICE", "/README.md", "/CHANGELOG.md"]
+
+[lib]
+name = "infinispan"
+
+[package.metadata.port]
+upstream = "Infinispan"
+upstream-versions = ["14.0.35.Final"]
+
+[dependencies]
+regex = "1"
+log = "0.4"
+jgroups = { path = "../jgroups-rs", version = "0.1.0" }
+caffeine = { package = "caffeine-rs", path = "../caffeine-rs", version = "0.1.0" }
+tokio = { version = "1.53.1", features = ["rt-multi-thread", "sync", "macros", "time"] }
+
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["test-util"] }

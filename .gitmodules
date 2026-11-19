@@ -1,0 +1,8 @@
+[submodule "upstream"]
+	path = upstream
+	url = https://github.com/infinispan/infinispan.git
+	shallow = true
+[submodule "upstream-protostream"]
+	path = upstream-protostream
+	url = https://github.com/infinispan/protostream.git
+	shallow = true

@@ -1,0 +1,5 @@
+# Verbatim third-party files, which cannot be scrubbed: tools/public/public_check.py skips the built-in local-path and
+# internal-host patterns and the worklog rule for them. The denylist still applies. One `<glob>  # <reason>` per line;
+# `**` any path, `*` within a directory, a leading `!` takes a path back out (the last matching line wins).
+# None today: upstream/ and upstream-protostream/ are submodules (gitlinks), which the gate does not read, and no tracked
+# file is verbatim third-party content.
